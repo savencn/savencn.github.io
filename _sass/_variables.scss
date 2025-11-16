@@ -1,10 +1,14 @@
-
 //
 // VARIABLES
 //
 
 // Colors
-$blue: #4183C4;
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$accent-color: #e74c3c;
+$background-color: #f9f9f9;
+$text-color: #333;
+$border-color: #ddd;
 
 // Grays
 $black: #000;
@@ -15,13 +19,22 @@ $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+	Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$serif: Georgia, Times, serif;
+$monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+	monospace;
+
+// Typography
+$base-font-size: 16px;
+$base-line-height: 1.6;
+
+// Spacing
+$spacing-unit: 30px;
 
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
+	@media screen and (max-width: 640px) {
+		@content;
+	}
 }

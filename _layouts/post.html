@@ -3,15 +3,21 @@ layout: default
 ---
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
+	<h1>{{ page.title }}</h1>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+	<div class="entry">{{ content }}</div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+	<div class="date">Written on {{ page.date | date: "%B %e, %Y" }}</div>
 
-  {% include disqus.html %}
+	<div class="post-nav">
+		{% if page.previous.url %}
+		<a href="{{page.previous.url}}" class="prev-link"
+			>&laquo; Previous Post</a
+		>
+		{% endif %} {% if page.next.url %}
+		<a href="{{page.next.url}}" class="next-link">Next Post &raquo;</a>
+		{% endif %}
+	</div>
+
+	{% include disqus.html %}
 </article>
